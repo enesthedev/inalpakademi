@@ -47,18 +47,46 @@ Formlar, kullanıcının odağını dağıtmayacak şekilde sade ve adım adım 
         *   *Öğrenci:* Hedeflenen ders, Seviye, Hedefler.
     3.  **Onay/Özet:** Girilen bilgilerin kontrolü.
 
-## 📦 Veritabanı Şeması (Önerilen)
+## 📦 Veritabanı Şeması
 
-*Mevcut Supabase yapısı üzerine:*
+### Neon PostgreSQL + Drizzle ORM
 
 ### Applications Tablosu
 | Alan | Tip | Açıklama |
 |------|-----|----------|
-| `id` | UUID | Primary key |
+| `id` | UUID | Primary key (auto-generated) |
 | `type` | enum | 'tutor', 'student' |
 | `status` | enum | 'pending', 'approved', 'rejected' |
-| `full_name` | string | Ad Soyad |
-| `email` | string | İletişim e-postası |
-| `phone` | string? | Telefon |
-| `details` | jsonb | Form tipine göre değişen detaylı veriler |
+| `full_name` | varchar(255) | Ad Soyad |
+| `email` | varchar(255) | İletişim e-postası |
+| `phone` | varchar(50)? | Telefon (opsiyonel) |
+| `details` | text (JSON) | Form tipine göre değişen detaylı veriler |
 | `created_at` | timestamp | Başvuru tarihi |
+| `updated_at` | timestamp | Son güncelleme |
+
+### Enum Tanımları
+```sql
+CREATE TYPE application_type AS ENUM ('tutor', 'student');
+CREATE TYPE application_status AS ENUM ('pending', 'approved', 'rejected');
+```
+
+## 🔐 Admin Paneli
+
+### Erişim
+- **URL:** `/panel`
+- **Auth:** Session-based authentication
+- **Korumalı Rotalar:** `/panel/*`
+
+### Sayfa Yapısı
+| Rota | Açıklama |
+|------|----------|
+| `/panel` | Dashboard (istatistikler) |
+| `/panel/basvurular` | Başvuru listesi |
+| `/panel/basvurular/[id]` | Başvuru detay |
+| `/giris` | Admin giriş sayfası |
+
+### Layout
+- **Sidebar:** Sol tarafta sabit navigasyon
+- **Header:** Üstte breadcrumb ve kullanıcı bilgisi
+- **Main:** Sayfa içeriği
+
