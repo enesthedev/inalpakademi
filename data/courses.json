@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Matematik - Fonksiyonlar",
+    "date": "13 Nisan",
+    "time": "12:00 - 13:00",
+    "location": "Espressolab, Ankara",
+    "type": "face-to-face",
+    "instructor": {
+      "name": "Ali Yılmaz",
+      "title": "Boğaziçi Üniversitesi Tıp Fakültesi, Türkiye 48.cisi"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Fizik - Dinamik",
+    "date": "14 Nisan",
+    "time": "14:00 - 15:00",
+    "location": "Online",
+    "type": "online",
+    "instructor": {
+      "name": "Zeynep Kaya",
+      "title": "İTÜ Fizik Mühendisliği, Türkiye 23.cüsü"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Kimya - Organik Bileşikler",
+    "date": "15 Nisan",
+    "time": "10:00 - 11:00",
+    "location": "Starbucks, İstanbul",
+    "type": "face-to-face",
+    "instructor": {
+      "name": "Mehmet Demir",
+      "title": "Hacettepe Tıp Fakültesi, Türkiye 15.cisi"
+    }
+  }
+]

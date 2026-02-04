@@ -44,20 +44,24 @@ bun run lint
 
 1. **Dosya Adlandırma:** kebab-case (örn: `application-form.tsx`)
 2. **Component Adlandırma:** PascalCase (örn: `ApplicationForm`)
-3. **Dil:** Türkçe UI metinleri, İngilizce kod/yorumlar
-4. **Stil:** `Tailwind CSS` + `index.css` (Global değişkenler).
-5. **Import Sırası:**
+3. **Tek Bileşen Kuralı:** Her dosya SADECE BİR React bileşeni (export default) içermelidir. Aynı dosyada birden fazla bileşen tanımlanmamalıdır.
+4. **Veri Güvenliği (Don't Trust Client):** Client'tan gelen verilere asla güvenilmemeli, Server Action'larda Zod ile mutlaka validasyon yapılmalıdır.
+5. **Tip Güvenliği (Models):** Server Action'lar ve API döngüleri, mock veri dahi olsa mutlaka tanımlı bir Model/Interface üzerinden tip güvenli olmalıdır.
+6. **Mock Veri Yönetimi:** Mock veriler (.ts/.tsx) kod dosyaları içinde hardcoded OLMAMALI. Veriler `data/` klasöründe JSON formatında tutulmalı ve oradan okunmalıdır.
+7. **Dil:** Türkçe UI metinleri, İngilizce kod/yorumlar
+8. **Stil:** `Tailwind CSS` + `index.css` (Global değişkenler).
+9. **Import Sırası:**
    - React/Next.js
    - External packages
    - Internal modules (@ alias)
    - Relative imports
-6. **Component Yapısı:**
+10. **Component Yapısı:**
    - Props interface
    - Component function
    - Helper functions
-7. **Server Actions:** `"use server"` direktifi ile
-8. **Client Components:** `"use client"` direktifi ile
-9. **Yorum Satırı:** Kod içerisinde yorum satırı BULUNMAMALI (Karmaşık mantıklar hariç).
+11. **Server Actions:** `"use server"` direktifi ile.
+12. **Client Components:** `"use client"` direktifi ile.
+13. **Yorum Satırı:** Kod içerisinde yorum satırı BULUNMAMALI (Karmaşık mantıklar hariç).
 
 ## 🔄 Güncelleme Geçmişi
 
@@ -65,4 +69,5 @@ bun run lint
 |-------|------------|
 | 2026-02-04 | Inalp projesi başlatıldı. Agent konfigürasyonu Preply ve yeni tasarım gereksinimlerine göre güncellendi. |
 | 2026-02-04 | Phase 1 & 2 tamamlandı: Formik/Zod kuruldu, globals.css güncellendi, Landing Page oluşturuldu. |
+| 2026-02-04 | Kodlama standartları güncellendi: Tek bileşen kuralı, Mock veri yönetimi (JSON), Server Action tiplemeleri ve Don't Trust Client prensipleri eklendi. |
 

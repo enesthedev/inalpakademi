@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "question": "Inalp nasıl çalışır?",
+    "answer": "Inalp, sizi alanında uzman eğitmenlerle eşleştirir. İlk dersinizde hedeflerinizi belirler, ardından kişiselleştirilmiş bir ders planı oluşturursunuz. Online veya yüz yüze derslere katılabilirsiniz."
+  },
+  {
+    "id": "2",
+    "question": "Ücretsiz deneme dersi var mı?",
+    "answer": "Evet! İlk dersiniz tamamen ücretsizdir. Bu sayede platformumuzu ve eğitmenlerimizi risk almadan deneyebilirsiniz."
+  },
+  {
+    "id": "3",
+    "question": "Eğitmenler nasıl seçiliyor?",
+    "answer": "Tüm eğitmenlerimiz kapsamlı bir mülakat sürecinden geçiyor. Sadece alanında başarılı, derece yapmış ve öğretme becerisi kanıtlanmış adayları kabul ediyoruz."
+  },
+  {
+    "id": "4",
+    "question": "Hangi dersler mevcut?",
+    "answer": "YKS, TYT, AYT, LGS hazırlık derslerinden yabancı dil eğitimlerine, yazılımdan müziğe kadar geniş bir yelpazede ders sunuyoruz."
+  },
+  {
+    "id": "5",
+    "question": "Ders ücretleri nasıl belirleniyor?",
+    "answer": "Ücretler eğitmen deneyimi, ders türü ve süresine göre değişir. Her eğitmenin profil sayfasında saatlik ücretini görebilirsiniz."
+  }
+]

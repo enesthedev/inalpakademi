@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "name": "Ahmet Yılmaz",
+    "role": "Yazılım Geliştirici",
+    "avatar": "AY",
+    "content": "Inalp sayesinde İngilizce seviyemi B2'den C1'e yükselttim. Eğitmenlerim son derece profesyonel ve sabırlıydı.",
+    "rating": 5
+  },
+  {
+    "id": "2",
+    "name": "Zeynep Kaya",
+    "role": "Üniversite Öğrencisi",
+    "avatar": "ZK",
+    "content": "Matematik derslerinde zorlanıyordum. Buradaki özel dersler sayesinde notlarım yükseldi ve sınavlarımı geçtim!",
+    "rating": 5
+  },
+  {
+    "id": "3",
+    "name": "Mehmet Demir",
+    "role": "Girişimci",
+    "avatar": "MD",
+    "content": "İş görüşmeleri için Almanca öğrenmem gerekiyordu. 6 ayda konuşma seviyesine ulaştım. Harika bir platform!",
+    "rating": 5
+  },
+  {
+    "id": "4",
+    "name": "Elif Öztürk",
+    "role": "Grafik Tasarımcı",
+    "avatar": "EÖ",
+    "content": "Excel ve veri analizi eğitimleri kariyerime büyük katkı sağladı. Eğitmenler gerçekten işini biliyor.",
+    "rating": 4
+  },
+  {
+    "id": "5",
+    "name": "Can Aydın",
+    "role": "Lise Öğrencisi",
+    "avatar": "CA",
+    "content": "YKS hazırlık sürecimde Inalp'teki matematik ve fizik dersleri çok faydalı oldu. Hedeflediğim bölüme yerleştim!",
+    "rating": 5
+  },
+  {
+    "id": "6",
+    "name": "Selin Arslan",
+    "role": "Pazarlama Uzmanı",
+    "avatar": "SA",
+    "content": "Dijital pazarlama ve SEO eğitimleri aldım. Öğrendiklerimi hemen işimde uyguladım ve sonuçlar harika!",
+    "rating": 5
+  },
+  {
+    "id": "7",
+    "name": "Burak Çelik",
+    "role": "Mühendis",
+    "avatar": "BÇ",
+    "content": "Python programlama öğrenmek istiyordum. Sıfırdan başlayıp 3 ayda kendi projelerimi yapmaya başladım.",
+    "rating": 5
+  },
+  {
+    "id": "8",
+    "name": "Ayşe Yıldız",
+    "role": "Öğretmen",
+    "avatar": "AYı",
+    "content": "Kendi alanımda uzmanlaşmak için pedagoji eğitimleri aldım. Çok profesyonel bir deneyimdi.",
+    "rating": 4
+  }
+]
