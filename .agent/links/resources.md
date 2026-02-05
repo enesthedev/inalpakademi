@@ -1,12 +1,29 @@
-# 🔗 Kaynaklar ve İlgili Dosyalar
+# 🔗 Resources and Related Files
 
-## Mevcut Workflows (.agent/workflows/)
-- `supabase-migrations.md` - Veritabanı yönetim adımları
-- `context-check.md` - Proje bağlamını kontrol etme (bu dosya güncellenecektir)
+## Available Workflows (.agent/workflows/)
+- `analyze-changes.md` - Analyze application changes and update documentation
+- `context-check.md` - Check project context before tasks and update after completion
 
-## Analiz Raporları (.gemini -> .agent/migration_archive/)
-> Not: Eski `.gemini` klasöründeki raporlar arşivlenmiştir veya görev tamamlandığı için silinebilir.
+## Design References
+- [Preply](https://preply.com/) - Primary design inspiration
+- [v0 Education Website Design](https://v0-egitim-website-design.vercel.app/) - Landing page reference
 
-- `PRODUCT_CATEGORY_ANALYSIS.md` (Tamamlandı)
-- `USEFFECT_DONTTRUST.md` (Güncel güvenlik analizi)
-- `PRODUCT_LIST_PAGE_TASK.md` (Tamamlandı)
+## Technology Documentation
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS v4](https://tailwindcss.com/docs)
+- [next-intl](https://next-intl-docs.vercel.app/)
+- [Drizzle ORM](https://orm.drizzle.team/)
+- [Zod](https://zod.dev/)
+- [Formik](https://formik.org/)
+
+## Data Files (data/)
+- `courses.json` - Active courses data
+- `faq.json` - Frequently asked questions
+- `success-stories.json` - Success story cards
+- `testimonials.json` - User testimonials
+
+## Server Actions (app/actions/)
+- `courses.ts` - Fetches and validates course data
+- `faq.ts` - Fetches and validates FAQ data
+- `success-stories.ts` - Fetches and validates success stories
+- `testimonials.ts` - Fetches and validates testimonial data

@@ -1,33 +1,33 @@
 # Inalp Agent Configuration
 
-> **Son Güncelleme:** 2026-02-04
-> **Versiyon:** 2.0.0
-> **Konum:** `AGENT.md` (Root)
+> **Last Updated:** 2026-02-05
+> **Version:** 2.1.0
+> **Location:** `AGENT.md` (Root)
 
-Bu dosya, yapay zeka agent'ının davranışını yönlendiren temel yapılandırma ve referans dosyasıdır. Proje bağlamı ve kuralları `.agent/` dizini altında modüler olarak tutulmaktadır.
+This file is the main configuration and reference document that guides the AI agent's behavior. Project context and rules are maintained modularly under the `.agent/` directory.
 
-## 🎯 Proje Özeti
-**Inalp**, [Preply](https://preply.com/) benzeri modern bir eğitim platformudur. Mavi tonlarının hakim olduğu, kullanıcı dostu ve premium bir tasarıma sahiptir.
+## 🎯 Project Summary
+**Inalp** is a modern education platform similar to [Preply](https://preply.com/). It features a user-friendly, premium design dominated by blue tones.
 
-**Temel Özellikler:**
-*   **Dizayn:** Preply baz alınarak oluşturulacak, mavi tonlar hakim.
-*   **İçerik:**
-    *   Modern bir ana sayfa ([Referans Tasarım](https://v0-egitim-website-design.vercel.app/))
-    *   İki adet kapsamlı başvuru formu.
-*   **Teknik:** `next-intl` (Sadece rota lokalizasyonu için), Next.js, Tailwind CSS.
+**Key Features:**
+*   **Design:** Based on Preply, blue tones dominate.
+*   **Content:**
+    *   Modern landing page ([Reference Design](https://v0-egitim-website-design.vercel.app/))
+    *   Two comprehensive application forms.
+*   **Technical:** `next-intl` (Route localization only), Next.js, Tailwind CSS.
 
-## 📂 Bağlam Yapısı (.agent/)
+## 📂 Context Structure (.agent/)
 
-| Dizin/Dosya | Açıklama |
-|-------------|----------|
-| `spec/requirement.md` | Proje gereksinimleri, kullanıcı hikayeleri ve hedefler |
-| `spec/design.md` | UI/UX kuralları, renk paleti, bileşen hiyerarşisi ve form yapıları |
-| `spec/tasks.md` | Bekleyen işler (TODO), güncel çalışma planı |
-| `wiki/architecture.md` | Teknoloji stack'i, mimari kararlar (Auth, i18n), klasör yapısı |
-| `plans/` | Gelistirme fazları ve detaylı analizler |
-| `links/resources.md` | Tasarım referansları ve kaynaklar |
+| Directory/File | Description |
+|----------------|-------------|
+| `spec/requirement.md` | Project requirements, user stories, and goals |
+| `spec/design.md` | UI/UX guidelines, color palette, component hierarchy, and form structures |
+| `spec/tasks.md` | Pending tasks (TODO), current work plan |
+| `wiki/architecture.md` | Technology stack, architectural decisions (Auth, i18n), folder structure |
+| `plans/` | Development phases and detailed analyses |
+| `links/resources.md` | Design references and resources |
 
-## 📜 Komutlar
+## 📜 Commands
 
 ```bash
 # Development
@@ -40,35 +40,37 @@ bun run build
 bun run lint
 ```
 
-## 📌 Kodlama Standartları
+## 📌 Coding Standards
 
-1. **Dosya Adlandırma:** kebab-case (örn: `application-form.tsx`)
-2. **Component Adlandırma:** PascalCase (örn: `ApplicationForm`)
-3. **Tek Bileşen Kuralı:** Her dosya SADECE BİR React bileşeni (export default) içermelidir. Aynı dosyada birden fazla bileşen tanımlanmamalıdır.
-4. **Veri Güvenliği (Don't Trust Client):** Client'tan gelen verilere asla güvenilmemeli, Server Action'larda Zod ile mutlaka validasyon yapılmalıdır.
-5. **Tip Güvenliği (Models):** Server Action'lar ve API döngüleri, mock veri dahi olsa mutlaka tanımlı bir Model/Interface üzerinden tip güvenli olmalıdır.
-6. **Mock Veri Yönetimi:** Mock veriler (.ts/.tsx) kod dosyaları içinde hardcoded OLMAMALI. Veriler `data/` klasöründe JSON formatında tutulmalı ve oradan okunmalıdır.
-7. **Dil:** Türkçe UI metinleri, İngilizce kod/yorumlar
-8. **Stil:** `Tailwind CSS` + `index.css` (Global değişkenler).
-9. **Import Sırası:**
+1. **File Naming:** kebab-case (e.g., `application-form.tsx`)
+2. **Component Naming:** PascalCase (e.g., `ApplicationForm`)
+3. **Single Component Rule:** Each file should contain ONLY ONE React component (export default). Multiple components should not be defined in the same file.
+4. **Data Security (Don't Trust Client):** Never trust data from the client; always validate with Zod in Server Actions.
+5. **Type Safety (Models):** Server Actions and API responses must be type-safe through defined Models/Interfaces, even for mock data.
+6. **Mock Data Management:** Mock data should NOT be hardcoded in code files (.ts/.tsx). Data should be stored in JSON format in the `data/` folder and read from there.
+7. **Language:** Turkish UI texts, English code/comments
+8. **Styling:** `Tailwind CSS` + `globals.css` (Global variables).
+9. **Import Order:**
    - React/Next.js
    - External packages
    - Internal modules (@ alias)
    - Relative imports
-10. **Component Yapısı:**
+10. **Component Structure:**
    - Props interface
    - Component function
    - Helper functions
-11. **Server Actions:** `"use server"` direktifi ile.
-12. **Client Components:** `"use client"` direktifi ile.
-13. **Yorum Satırı:** Kod içerisinde yorum satırı BULUNMAMALI (Karmaşık mantıklar hariç).
+11. **Server Actions:** With `"use server"` directive.
+12. **Client Components:** With `"use client"` directive.
+13. **Comments:** Comments should NOT be present in code (except for complex logic).
 
-## 🔄 Güncelleme Geçmişi
+## 🔄 Update History
 
-| Tarih | Değişiklik |
-|-------|------------|
-| 2026-02-04 | Inalp projesi başlatıldı. Agent konfigürasyonu Preply ve yeni tasarım gereksinimlerine göre güncellendi. |
-| 2026-02-04 | Phase 1 & 2 tamamlandı: Formik/Zod kuruldu, globals.css güncellendi, Landing Page oluşturuldu. |
-| 2026-02-04 | Kodlama standartları güncellendi: Tek bileşen kuralı, Mock veri yönetimi (JSON), Server Action tiplemeleri ve Don't Trust Client prensipleri eklendi. |
-| 2026-02-04 | Admin Panel analizi tamamlandı: 5 fazlı geliştirme planı oluşturuldu (Neon PostgreSQL, Auth, Layout, CRUD, Form Entegrasyonu). |
-
+| Date | Change |
+|------|--------|
+| 2026-02-05 | Implemented Public Layout Restructure: Created `(public)` group, added `tutors.json`, simplified sections. |
+| 2026-02-05 | Created Public Layout Restructure Plan (5 phases) - see `.agent/plans/public-layout-restructure.md` |
+| 2026-02-05 | Translated all documentation to English. Updated project structure and component inventory. |
+| 2026-02-04 | Inalp project started. Agent configuration updated according to Preply and new design requirements. |
+| 2026-02-04 | Phase 1 & 2 completed: Formik/Zod installed, globals.css updated, Landing Page created. |
+| 2026-02-04 | Coding standards updated: Single component rule, Mock data management (JSON), Server Action typing, and Don't Trust Client principles added. |
+| 2026-02-04 | Admin Panel analysis completed: 5-phase development plan created (Neon PostgreSQL, Auth, Layout, CRUD, Form Integration). |

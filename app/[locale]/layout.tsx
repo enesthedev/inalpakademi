@@ -1,25 +1,22 @@
-import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { Geist } from "next/font/google";
-
-import { Toaster } from "../components/ui/sonner";
-
-import "../globals.css";
-
+import { Caveat, Geist } from "next/font/google";
 import { routing } from "@/lib/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-export const metadata: Metadata = {
-  metadataBase: new URL("localhost:3000"),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
-};
+import "../globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   display: "swap",
   subsets: ["latin"],
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["700"],
+  display: "swap",
+  variable: "--font-caveat",
 });
 
 type Props = {
@@ -44,10 +41,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body className={`antialiased ${caveat.variable} ${geistSans.variable}`}>
         <NextIntlClientProvider locale={locale}>
           {children}
-          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,81 +1,81 @@
 ---
-description: Uygulamada yapılan değişiklikleri analiz edip dökümantasyonu güncelleme
+description: Analyze application changes and update documentation
 ---
 
-# Değişiklik Analizi Workflow'u
+# Change Analysis Workflow
 
-Bu workflow, uygulamada yapılan değişiklikleri analiz eder, olası sorunları tespit eder ve ilgili dökümantasyonu günceller.
+This workflow analyzes changes made to the application, detects potential issues, and updates relevant documentation.
 
-## 1. Değişiklikleri Tespit Et
+## 1. Detect Changes
 
 // turbo
-1. `git status` veya `git diff --stat` komutunu çalıştırarak hangi dosyaların değiştiğini tespit et.
-2. Değişen dosyaları kategorilere ayır:
-   - **UI/Bileşen:** `components/`, `app/[locale]/` altındaki `.tsx` dosyaları
-   - **Stil:** `globals.css`, Tailwind konfigürasyonu
-   - **Altyapı:** `proxy.ts`, `lib/`, `next.config.ts`, `package.json`
+1. Run `git status` or `git diff --stat` to identify which files have changed.
+2. Categorize the changed files:
+   - **UI/Component:** `.tsx` files under `components/`, `app/[locale]/`
+   - **Style:** `globals.css`, Tailwind configuration
+   - **Infrastructure:** `proxy.ts`, `lib/`, `next.config.ts`, `package.json`
    - **i18n:** `lib/i18n/`, `messages/`
-   - **Form/Validasyon:** `validations/`, Formik/Zod şemaları
+   - **Form/Validation:** `validations/`, Formik/Zod schemas
 
-## 2. Değişiklikleri Analiz Et
+## 2. Analyze Changes
 
 // turbo
-3. Değişen dosyaları oku ve ne tür değişiklikler yapıldığını anla.
-4. Her değişiklik için şu kontrolleri yap:
-   - **Import Kontrolü:** Kullanılmayan importlar var mı?
-   - **Tip Güvenliği:** TypeScript hataları var mı?
-   - **Stil Tutarlılığı:** Tailwind class'ları globals.css ile uyumlu mu?
-   - **Kodlama Standartları:** `AGENT.md` içindeki standartlara uyuluyor mu?
-   - **Bağımlılıklar:** Yeni paket eklendi mi? `package.json` güncellendi mi?
+3. Read the changed files and understand what kinds of changes were made.
+4. For each change, perform the following checks:
+   - **Import Check:** Are there unused imports?
+   - **Type Safety:** Are there TypeScript errors?
+   - **Style Consistency:** Are Tailwind classes compatible with globals.css?
+   - **Coding Standards:** Are the standards in `AGENT.md` being followed?
+   - **Dependencies:** Was a new package added? Was `package.json` updated?
 
-## 3. Olası Sorunları Raporla
+## 3. Report Potential Issues
 
-5. Tespit edilen her sorun için şu bilgileri hazırla:
-   - **Dosya:** Hangi dosyada?
-   - **Satır:** Hangi satırda (mümkünse)?
-   - **Sorun:** Ne tür bir sorun?
-   - **Öneri:** Nasıl çözülebilir?
+5. For each detected issue, prepare the following information:
+   - **File:** Which file?
+   - **Line:** Which line (if possible)?
+   - **Issue:** What type of issue?
+   - **Suggestion:** How can it be fixed?
 
-6. Sorunları kullanıcıya raporla ve düzeltme önerileri sun.
+6. Report issues to the user and offer fix suggestions.
 
-## 4. Dökümantasyonu Güncelle
+## 4. Update Documentation
 
-7. Yapılan değişikliklere göre ilgili dosyaları güncelle:
+7. Update relevant files based on the changes made:
 
-   **UI/Bileşen Değişiklikleri için:**
-   - `.agent/spec/design.md` → Yeni bileşenler veya UI değişiklikleri ekle.
+   **For UI/Component Changes:**
+   - `.agent/spec/design.md` → Add new components or UI changes.
 
-   **Altyapı/Stack Değişiklikleri için:**
-   - `.agent/wiki/architecture.md` → Yeni paketler, yapısal değişiklikler.
+   **For Infrastructure/Stack Changes:**
+   - `.agent/wiki/architecture.md` → New packages, structural changes.
 
-   **Görev Tamamlama için:**
-   - `.agent/spec/tasks.md` → Tamamlanan görevleri `[x]` olarak işaretle.
+   **For Task Completion:**
+   - `.agent/spec/tasks.md` → Mark completed tasks with `[x]`.
 
-   **Yeni Görev/Sorun Tespiti için:**
-   - `.agent/spec/tasks.md` → Yeni görev veya bilinen sorun ekle.
+   **For New Task/Issue Detection:**
+   - `.agent/spec/tasks.md` → Add new task or known issue.
 
-   **Tüm Önemli Değişiklikler için:**
-   - `AGENT.md` → "Güncelleme Geçmişi" tablosuna yeni satır ekle.
-   - `AGENT.md` → "Son Güncelleme" tarihini bugüne güncelle.
+   **For All Important Changes:**
+   - `AGENT.md` → Add new row to "Update History" table.
+   - `AGENT.md` → Update "Last Updated" date to today.
 
-## 5. Özet Rapor
+## 5. Summary Report
 
-8. Kullanıcıya kısa bir özet sun:
-   - Değişen dosya sayısı
-   - Tespit edilen sorun sayısı
-   - Güncellenen döküman sayısı
+8. Present a brief summary to the user:
+   - Number of changed files
+   - Number of detected issues
+   - Number of updated documents
 
-## Güncelleme Formatı
+## Update Format
 
-`AGENT.md` > Güncelleme Geçmişi:
+`AGENT.md` > Update History:
 
 ```markdown
-| Tarih | Değişiklik |
-|-------|------------|
-| YYYY-MM-DD | Yapılan değişikliğin kısa açıklaması |
+| Date | Change |
+|------|--------|
+| YYYY-MM-DD | Brief description of the change made |
 ```
 
-## Örnek Kullanım
+## Example Usage
 
-Kullanıcı: `/analyze-changes` veya "Değişiklikleri analiz et"
-Agent: Bu workflow'u çalıştırır.
+User: `/analyze-changes` or "Analyze changes"
+Agent: Runs this workflow.

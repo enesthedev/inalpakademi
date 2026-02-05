@@ -1,88 +1,126 @@
-# 🏗️ Proje Mimarisi
+# 🏗️ Project Architecture
 
-**Inalp**, modern web teknolojileri ve proxy-chain mimarisi üzerine kurulu, kullanıcı odaklı bir eğitim platformudur.
+**Inalp** is a user-focused education platform built on modern web technologies and proxy-chain architecture.
 
-## 🛠️ Teknoloji Stack'i
+## 🛠️ Technology Stack
 
-| Kategori | Teknoloji | Notlar |
-|----------|-----------|--------|
-| **Framework** | Next.js 16 (App Router) | Server Components öncelikli |
-| **Runtime** | Bun | Paket yönetimi ve çalıştırma |
-| **Dil** | TypeScript | Strict mode aktif |
-| **Stil** | Tailwind CSS v4 | **Mavi tonlar** ve Preply tasarım sistemi |
-| **UI** | Radix UI / Shadcn UI | Erişilebilirlik odaklı |
-| **Form Yönetimi** | Formik | Type-safe form yönetimi |
-| **Validasyon** | Zod | Şema tabanlı doğrulama |
-| **Routing & i18n** | next-intl | **Proxy Chain** üzerinden sadece rota lokalizasyonu |
-| **Middleware** | Proxy Chain Pattern | `lib/proxy-chain` ile modüler middleware yönetimi |
-| **Veritabanı** | Neon PostgreSQL | Serverless PostgreSQL (Vercel entegrasyonu) |
-| **ORM** | Drizzle ORM | Type-safe veritabanı işlemleri |
-| **Auth** | Session-based | Cookie tabanlı basit auth (MVP) |
+| Category | Technology | Notes |
+|----------|------------|-------|
+| **Framework** | Next.js 16 (App Router) | Server Components priority |
+| **Runtime** | Bun | Package management and execution |
+| **Language** | TypeScript | Strict mode enabled |
+| **Styling** | Tailwind CSS v4 | **Blue tones** and Preply design system |
+| **UI** | Radix UI / Shadcn UI | Accessibility focused |
+| **Form Management** | Formik | Type-safe form management |
+| **Validation** | Zod | Schema-based validation |
+| **Routing & i18n** | next-intl | Route localization only via **Proxy Chain** |
+| **Middleware** | Proxy Chain Pattern | Modular middleware management via `lib/proxy-chain` |
+| **Database** | Neon PostgreSQL | Serverless PostgreSQL (Vercel integration) |
+| **ORM** | Drizzle ORM | Type-safe database operations |
+| **Auth** | Session-based | Cookie-based simple auth (MVP) |
 
-## 📁 Proje Yapısı
+## 📁 Project Structure
 
 ```
 inalp/
 ├── AGENT.md                   # Agent Root Configuration
 ├── .agent/                    # Spec, Design, Tasks, Plans
+│   ├── spec/                  # Requirements, design, tasks
+│   ├── wiki/                  # Architecture documentation
+│   ├── workflows/             # Automation workflows
+│   └── links/                 # Resources and references
 ├── app/
-│   ├── [locale]/              # i18n Routing Kökü
+│   ├── [locale]/              # i18n Routing Root
 │   │   ├── layout.tsx         # Root Layout (NextIntlClientProvider)
 │   │   ├── page.tsx           # Landing Page
-│   │   ├── basvuru/           # Başvuru Formları
-│   │   │   ├── egitmen/       # Eğitmen başvuru formu
-│   │   │   └── ogrenci/       # Öğrenci başvuru formu
+│   │   ├── components/        # Page-specific components
+│   │   │   ├── navbar.tsx     # Navigation bar
+│   │   │   ├── footer.tsx     # Footer component
+│   │   │   └── sections/      # Landing page sections
+│   │   │       ├── hero-section.tsx
+│   │   │       ├── stats-section.tsx
+│   │   │       ├── features-section.tsx
+│   │   │       ├── steps-section.tsx
+│   │   │       ├── active-courses-section.tsx
+│   │   │       ├── success-stories-section.tsx
+│   │   │       ├── testimonials-section.tsx
+│   │   │       ├── faq-section.tsx
+│   │   │       └── cta-section.tsx
+│   │   ├── basvuru/           # Application Forms
+│   │   │   ├── egitmen/       # Tutor application form
+│   │   │   └── ogrenci/       # Student application form
 │   │   ├── panel/             # Admin Panel
 │   │   │   ├── layout.tsx     # Panel layout (sidebar, header)
 │   │   │   ├── page.tsx       # Dashboard
-│   │   │   └── basvurular/    # Başvuru yönetimi
+│   │   │   └── basvurular/    # Application management
 │   │   └── giris/             # Admin login
 │   ├── actions/               # Server Actions
+│   │   ├── courses.ts         # Course data actions
+│   │   ├── faq.ts             # FAQ data actions
+│   │   ├── success-stories.ts # Success stories actions
+│   │   └── testimonials.ts    # Testimonials actions
 │   ├── components/
-│   │   └── ui/                # Temel UI Elemanları (Shadcn/Radix)
-│   ├── proxies/               # Middleware Proxy'leri (Auth, i18n vb.)
-│   ├── routes.ts              # Rota Sabitleri
+│   │   └── ui/                # Core UI Elements (Shadcn/Radix)
+│   ├── proxies/               # Middleware Proxies (Auth, i18n, etc.)
+│   ├── routes.ts              # Route Constants
+│   ├── utils/                 # Utility functions
 │   └── globals.css            # Tailwind v4 Theme Config
 ├── data/                      # JSON mock data files
+│   ├── courses.json           # Course data
+│   ├── faq.json               # FAQ data
+│   ├── success-stories.json   # Success stories data
+│   └── testimonials.json      # Testimonials data
 ├── lib/
-│   ├── auth/                  # Authentication utilities
-│   ├── db/                    # Database (Drizzle)
-│   │   ├── index.ts           # Neon connection
-│   │   ├── schema.ts          # Table definitions
-│   │   └── migrations/        # Drizzle migrations
-│   ├── i18n/                  # Routing ve Pathnames konfigürasyonu
-│   └── proxy-chain/           # Middleware Zincir Altyapısı
+│   ├── i18n/                  # Routing and Pathnames configuration
+│   └── proxy-chain/           # Middleware Chain Infrastructure
 ├── types/                     # TypeScript type definitions
-└── public/                    # Statik dosyalar
+└── public/                    # Static files
 ```
 
 ## 🔐 Middleware & Proxy Chain
 
-Projede merkezi bir `middleware.ts` yerine, `lib/proxy-chain` altında kurgulanan ve `app/proxies` altında tanımlanan modüler proxy yapıları kullanılır.
+Instead of a centralized `middleware.ts`, the project uses modular proxy structures built under `lib/proxy-chain` and defined in `app/proxies`.
 
-**Aktif Proxy'ler:**
-1.  **with18n**: `next-intl` middleware entegrasyonu.
-2.  **withAuth**: Panel rotaları için session kontrolü.
+**Active Proxies:**
+1.  **with18n**: `next-intl` middleware integration.
+2.  **withAuth**: Session control for panel routes.
 
-## 🎨 Tasarım Prensipleri
+## 🎨 Design Principles
 
-1.  **Global Tema:** Renkler ve fontlar `app/globals.css` içindeki `@theme` bloğunda yönetilir.
-2.  **Mavi Tonlar:** Güven ve profesyonellik algısı için mavi ağırlıklı palet kullanılır.
+1.  **Global Theme:** Colors and fonts are managed in the `@theme` block within `app/globals.css`.
+2.  **Blue Tones:** Blue-heavy palette is used for perception of trust and professionalism.
 
-## 📊 Veritabanı Mimarisi
+## 📊 Database Architecture
 
-### Bağlantı
+### Connection
 - **Provider:** Vercel Neon (Serverless PostgreSQL)
 - **ORM:** Drizzle ORM (type-safe queries)
-- **Connection:** HTTP-based (serverless uyumlu)
+- **Connection:** HTTP-based (serverless compatible)
 
-### Tablolar
-- `applications` - Başvuru kayıtları
+### Tables
+- `applications` - Application records
 
-## 🔒 Güvenlik
+## 🔒 Security
 
-1. **Server Actions:** Tüm veritabanı işlemleri server-side
-2. **Zod Validation:** Client verisi her zaman validate edilir
+1. **Server Actions:** All database operations are server-side
+2. **Zod Validation:** Client data is always validated
 3. **Session Auth:** Cookie-based authentication
-4. **Protected Routes:** `/panel/*` rotaları auth korumalı
+4. **Protected Routes:** `/panel/*` routes are auth protected
 
+## 📦 Data Flow Pattern
+
+```
+Client Request
+    ↓
+Server Action (app/actions/*.ts)
+    ↓
+Zod Validation (Schema-based)
+    ↓
+JSON Data (data/*.json)
+    ↓
+Type-safe Response
+    ↓
+React Server Component
+```
+
+This pattern ensures type safety and data integrity while keeping mock data separate from component code.

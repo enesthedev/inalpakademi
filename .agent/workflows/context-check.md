@@ -1,47 +1,47 @@
 ---
-description: Her görev öncesinde proje bağlamını kontrol etme ve görev sonunda güncelleme
+description: Check project context before tasks and update after completion
 ---
 
-# Proje Bağlam Kontrolü Workflow'u
+# Project Context Check Workflow
 
-Bu workflow, her görev başlangıcında ve sonunda `.agent/` dizini altındaki proje bağlam dosyalarının yönetimini sağlar.
+This workflow manages the project context files under the `.agent/` directory at the start and end of each task.
 
-## Görev Başlangıcında
+## At Task Start
 
 // turbo
-1. `AGENT.md` dosyasının varlığını kontrol et.
-2. `AGENT.md` dosyasını oku ve genel proje durumunu anla.
-3. İhtiyaca göre `.agent/spec/requirement.md`, `.agent/spec/design.md` veya `.agent/spec/tasks.md` dosyalarını incele.
+1. Check for the existence of `AGENT.md` file.
+2. Read `AGENT.md` and understand the general project state.
+3. Review `.agent/spec/requirement.md`, `.agent/spec/design.md`, or `.agent/spec/tasks.md` as needed.
 
-## Görev Sırasında
+## During Task
 
-4. Kod değişikliklerini yaparken `AGENT.md` içindeki "Kodlama Standartları"na uy.
-5. Yeni bir özellik ekliyorsan `spec/requirement.md` ve `spec/design.md` dosyalarındaki tanımlara dikkat et.
+4. Follow the "Coding Standards" in `AGENT.md` when making code changes.
+5. If adding a new feature, pay attention to the definitions in `spec/requirement.md` and `spec/design.md`.
 
-## Görev Sonunda
+## At Task End
 
-6. Yapılan değişiklikleri ilgili dosyalara yansıt:
-   - **Genel Değişiklikler:** `AGENT.md` dosyasındaki "Güncelleme Geçmişi"ne ekle.
-   - **Veritabanı/UI Değişiklikleri:** `.agent/spec/design.md` dosyasını güncelle.
-   - **Tamamlanan/Yeni Görevler:** `.agent/spec/tasks.md` dosyasını güncelle.
-   - **Altyapı/Stack Değişiklikleri:** `.agent/wiki/architecture.md` dosyasını güncelle.
+6. Reflect the changes made in relevant files:
+   - **General Changes:** Add to "Update History" in `AGENT.md`.
+   - **Database/UI Changes:** Update `.agent/spec/design.md`.
+   - **Completed/New Tasks:** Update `.agent/spec/tasks.md`.
+   - **Infrastructure/Stack Changes:** Update `.agent/wiki/architecture.md`.
 
-7. `AGENT.md` dosyasındaki "Son Güncelleme" tarihini güncelle.
+7. Update the "Last Updated" date in `AGENT.md`.
 
-## Dosya Konumları
+## File Locations
 
-- **Ana Yapı:** `AGENT.md`
-- **Gereksinimler:** `.agent/spec/requirement.md`
-- **Tasarım & DB:** `.agent/spec/design.md`
-- **Görevler:** `.agent/spec/tasks.md`
-- **Mimari:** `.agent/wiki/architecture.md`
+- **Main Structure:** `AGENT.md`
+- **Requirements:** `.agent/spec/requirement.md`
+- **Design & DB:** `.agent/spec/design.md`
+- **Tasks:** `.agent/spec/tasks.md`
+- **Architecture:** `.agent/wiki/architecture.md`
 
-## Güncelleme Formatı
+## Update Format
 
-`AGENT.md` > Güncelleme Geçmişi:
+`AGENT.md` > Update History:
 
 ```markdown
-| Tarih | Değişiklik |
-|-------|------------|
-| YYYY-MM-DD | Yapılan değişikliğin kısa açıklaması |
+| Date | Change |
+|------|--------|
+| YYYY-MM-DD | Brief description of the change made |
 ```
