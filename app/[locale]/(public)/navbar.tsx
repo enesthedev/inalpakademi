@@ -56,6 +56,12 @@ export function Navbar() {
               href=""
               className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium"
             >
+              Hemen Başla
+            </Link>
+            <Link
+              href=""
+              className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium"
+            >
               Eğitim Modelimiz
             </Link>
             <Link
@@ -68,7 +74,7 @@ export function Navbar() {
               href=""
               className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium"
             >
-              Soru Çözüm
+              Eğitmen Ol
             </Link>
           </nav>
 
@@ -96,23 +102,33 @@ export function Navbar() {
                 className="flex flex-col gap-1 px-4"
                 aria-label="Mobil navigasyon"
               >
-                <DrawerClose asChild>
-                  <Link
-                    href=""
-                    className="px-4 py-3 rounded-xl hover:bg-muted transition-colors text-foreground font-medium"
-                  >
-                    Eğitim Modelimiz
-                  </Link>
-                </DrawerClose>
+                <Link
+                  href=""
+                  className="px-4 py-3 rounded-xl hover:bg-muted transition-colors text-foreground font-medium"
+                >
+                  Hemen Başla
+                </Link>
+                <Link
+                  href=""
+                  className="px-4 py-3 rounded-xl hover:bg-muted transition-colors text-foreground font-medium"
+                >
+                  Eğitim Modelimiz
+                </Link>
+                <Link
+                  href=""
+                  className="px-4 py-3 rounded-xl hover:bg-muted transition-colors text-foreground font-medium"
+                >
+                  Yorumlar
+                </Link>
+                <Link
+                  href=""
+                  className="px-4 py-3 rounded-xl hover:bg-muted transition-colors text-foreground font-medium"
+                >
+                  Eğitmen Ol
+                </Link>
               </nav>
 
-              <DrawerFooter>
-                <DrawerClose asChild>
-                  <Button variant="outline" className="w-full" asChild>
-                    <Link href={ROUTES.LOGIN}>Giriş Yap</Link>
-                  </Button>
-                </DrawerClose>
-              </DrawerFooter>
+              <DrawerFooter>{/** */}</DrawerFooter>
             </DrawerContent>
           </Drawer>
         </div>

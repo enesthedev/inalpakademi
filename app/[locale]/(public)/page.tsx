@@ -37,7 +37,7 @@ export default async function LandingPage() {
             variant="secondary"
             className="h-12 px-8 text-sm shadow-none lg:h-14 lg:px-10 lg:text-lg"
           >
-            Hemen Başla
+            Şimdi Ders Al
           </Button>
           <Button
             variant="success"
