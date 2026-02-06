@@ -19,7 +19,7 @@ export function UniversitiesMarquee({
       <div className="relative">
         <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-white to-transparent z-10" />
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-white to-transparent z-10" />
-        <Marquee pauseOnHover className="[--duration:50s]">
+        <Marquee pauseOnHover className="[--duratin:50s]">
           {universities.map((university) => (
             <div
               key={university.id}
