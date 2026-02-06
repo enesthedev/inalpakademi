@@ -35,16 +35,6 @@
     "logo": "/universities/akdeniz-universitesi.png"
   },
   {
-    "id": "10",
-    "name": "Dicle Üniversitesi",
-    "logo": "/universities/dicle-universitesi.png"
-  },
-  {
-    "id": "11",
-    "name": "İstanbul Medipol Üniversitesi",
-    "logo": "/universities/istanbul-medipol-universitesi.png"
-  },
-  {
     "id": "12",
     "name": "Bursa Uludağ Üniversitesi",
     "logo": "/universities/bursa-uludag-universitesi.png"
@@ -68,11 +58,6 @@
     "id": "16",
     "name": "Mersin Üniversitesi",
     "logo": "/universities/mersin-universitesi.png"
-  },
-  {
-    "id": "17",
-    "name": "Yeditepe Üniversitesi",
-    "logo": "/universities/yeditepe-universitesi.png"
   },
   {
     "id": "18",
