@@ -9,8 +9,8 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <Card className="w-80 shrink-0 hover:shadow-lg transition-shadow duration-300">
-      <CardContent className="pt-6">
+    <Card className="w-80 shrink-0 hover:shadow-sm transition-shadow duration-300">
+      <CardContent>
         <div className="flex items-center gap-3 mb-4">
           <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
             {testimonial.avatar}

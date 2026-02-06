@@ -67,6 +67,7 @@ bun run lint
 
 | Date | Change |
 |------|--------|
+| 2026-02-06 | UI improvements: Updated testimonials card styling, adjusted hero section height, fixed Marquee Tailwind v4 syntax. |
 | 2026-02-05 | Implemented Public Layout Restructure: Created `(public)` group, added `tutors.json`, simplified sections. |
 | 2026-02-05 | Created Public Layout Restructure Plan (5 phases) - see `.agent/plans/public-layout-restructure.md` |
 | 2026-02-05 | Translated all documentation to English. Updated project structure and component inventory. |

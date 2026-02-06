@@ -19,7 +19,7 @@ export default async function LandingPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <section className="flex min-h-[90vh] 2xl:min-h-[50vh] w-full flex-col items-center justify-center space-y-10 bg-primary px-4">
+      <section className="flex min-h-[90vh] 2xl:min-h-[70vh] w-full flex-col items-center justify-center space-y-10 bg-primary px-4">
         <h1 className="max-w-xl text-center text-4xl font-semibold leading-tight text-primary-foreground md:max-w-md lg:text-5xl pt-32">
           <span className="bg-secondary px-2 text-primary-foreground">
             Sınavdan
