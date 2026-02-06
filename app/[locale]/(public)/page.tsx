@@ -1,20 +1,22 @@
 import { getTestimonials } from "@/app/actions/testimonials";
 import { getFaqItems } from "@/app/actions/faq";
 import { getTutors } from "@/app/actions/tutors";
+import { getUniversities } from "@/app/actions/universities";
 
-import { StepsSection } from "./components/sections/steps-section";
+import { UniversitiesMarquee } from "./components/sections/universities-marquee";
 import { TutorsSection } from "./components/sections/tutors-section";
 import { TestimonialsSection } from "./components/sections/testimonials-section";
 import { FaqSection } from "./components/sections/faq-section";
 import { CTASection } from "./components/sections/cta-section";
-import { Star } from "lucide-react";
+import { ClipboardPenLine, Rocket, Star } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 
-export default async function LandingPage() {
-  const [tutors, testimonials, faqItems] = await Promise.all([
+export default async function Page() {
+  const [tutors, testimonials, faqItems, universities] = await Promise.all([
     getTutors(),
     getTestimonials(),
     getFaqItems(),
+    getUniversities(),
   ]);
 
   return (
@@ -79,7 +81,71 @@ export default async function LandingPage() {
           </div>
         </div>
       </section>
-      <StepsSection />
+      <UniversitiesMarquee universities={universities} />
+      <section className="py-20 lg:py-32 bg-primary-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              3 Adımda <span className="text-primary">Başla</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Hayalindeki üniversiteye giden yol düşündüğünden çok daha basit.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="group relative bg-white rounded-2xl p-8 border border-border/50 hover:border-primary/20 transition-all duration-300">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <ClipboardPenLine className="w-7 h-7 text-primary" />
+                </div>
+                <span className="text-5xl font-bold text-muted-foreground/20 group-hover:text-primary/20 transition-colors">
+                  01
+                </span>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                Formu Doldur
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                İletişime geçelim ve ihtiyaçlarını anlayalım.
+              </p>
+            </div>
+            <div className="group relative bg-white rounded-2xl p-8 border border-border/50 hover:border-primary/20 transition-all duration-300">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Rocket className="w-7 h-7 text-primary" />
+                </div>
+                <span className="text-5xl font-bold text-muted-foreground/20 group-hover:text-primary/20 transition-colors">
+                  02
+                </span>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                Eğitmenini Tanı
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Seni en uygun eğitmenle eşleyelim ve deneme dersi planlayalım.
+              </p>
+            </div>
+            <div className="group relative bg-white rounded-2xl p-8 border border-border/50 hover:border-primary/20 transition-all duration-300">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Rocket className="w-7 h-7 text-primary" />
+                </div>
+                <span className="text-5xl font-bold text-muted-foreground/20 group-hover:text-primary/20 transition-colors">
+                  03
+                </span>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                Başarıya Ulaş
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Ders takibi, planlar ve programlarla dönem boyunca seni
+                hazırlayalım.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <TutorsSection tutors={tutors} />
       <TestimonialsSection testimonials={testimonials} />
       <FaqSection faqItems={faqItems} />

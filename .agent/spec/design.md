@@ -96,9 +96,10 @@ The landing page currently includes the following implemented sections:
 
 | Section | File | Description |
 |---------|------|-------------|
-| Hero | `hero-section.tsx` | Main banner with headline and CTAs (Static) |
-| Steps | `steps-section.tsx` | How it works step-by-step guide (Static) |
-| Tutors | `tutors-section.tsx` | Tutor cards from `tutors.json` (Dynamic) |
-| Testimonials | `testimonials-section.tsx` | User reviews from `testimonials.json` (Dynamic) |
+| Hero | Inline in `page.tsx` | Main banner with headline and CTAs (Static) |
+| Universities Marquee | `universities-marquee.tsx` | Scrolling university logos from `universities.json` (Dynamic) |
+| Steps | `steps-section.tsx` | 3-step cards with icons (Static) |
+| Tutors | `tutors-section.tsx` | Carousel with tutor cards, ratings, and student count from `tutors.json` (Dynamic) |
+| Testimonials | `testimonials-section.tsx` | User reviews marquee from `testimonials.json` (Dynamic) |
 | FAQ | `faq-section.tsx` | Accordion FAQ from `faq.json` (Dynamic) |
 | CTA | `cta-section.tsx` | Final call-to-action section (Static) |

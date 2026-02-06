@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Hacettepe Üniversitesi",
+    "logo": "/universities/hacettepe.png"
+  },
+  {
+    "id": "2",
+    "name": "Ankara Üniversitesi",
+    "logo": "/universities/ankara.png"
+  },
+  {
+    "id": "3",
+    "name": "Gazi Üniversitesi",
+    "logo": "/universities/gazi.png"
+  },
+  {
+    "id": "4",
+    "name": "ODTÜ",
+    "logo": "/universities/odtu.png"
+  },
+  {
+    "id": "5",
+    "name": "İstanbul Üniversitesi",
+    "logo": "/universities/istanbul.png"
+  },
+  {
+    "id": "6",
+    "name": "Ege Üniversitesi",
+    "logo": "/universities/ege.png"
+  },
+  {
+    "id": "7",
+    "name": "Dokuz Eylül Üniversitesi",
+    "logo": "/universities/dokuz-eylul.png"
+  },
+  {
+    "id": "8",
+    "name": "Marmara Üniversitesi",
+    "logo": "/universities/marmara.png"
+  }
+]

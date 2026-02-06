@@ -3,20 +3,47 @@
     {
       "id": "1",
       "name": "Ali Yılmaz",
+      "specialization": "Matematik",
       "university": "Boğaziçi Üniversitesi Tıp Fakültesi",
-      "photo": "/images/tutors/ali-yilmaz.jpg"
+      "photo": "/images/tutors/ali-yilmaz.jpg",
+      "rating": 4.9,
+      "studentCount": 120
     },
     {
       "id": "2",
       "name": "Zeynep Kaya",
+      "specialization": "Fizik",
       "university": "İTÜ Fizik Mühendisliği",
-      "photo": "/images/tutors/zeynep-kaya.jpg"
+      "photo": "/images/tutors/zeynep-kaya.jpg",
+      "rating": 4.8,
+      "studentCount": 95
     },
     {
       "id": "3",
       "name": "Mehmet Demir",
+      "specialization": "Biyoloji",
       "university": "Hacettepe Tıp Fakültesi",
-      "photo": "/images/tutors/mehmet-demir.jpg"
+      "photo": "/images/tutors/mehmet-demir.jpg",
+      "rating": 5.0,
+      "studentCount": 150
+    },
+    {
+      "id": "4",
+      "name": "Ayşe Öztürk",
+      "specialization": "Kimya",
+      "university": "Ankara Üniversitesi Tıp",
+      "photo": "/images/tutors/ayse-ozturk.jpg",
+      "rating": 4.7,
+      "studentCount": 80
+    },
+    {
+      "id": "5",
+      "name": "Can Arslan",
+      "specialization": "Türkçe",
+      "university": "Gazi Üniversitesi Edebiyat",
+      "photo": "/images/tutors/can-arslan.jpg",
+      "rating": 4.9,
+      "studentCount": 110
     }
   ]
 }

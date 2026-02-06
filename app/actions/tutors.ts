@@ -7,8 +7,11 @@ import { z } from "zod";
 const TutorSchema = z.object({
   id: z.string(),
   name: z.string(),
+  specialization: z.string(),
   university: z.string(),
   photo: z.string(),
+  rating: z.number(),
+  studentCount: z.number(),
 });
 
 export type Tutor = z.infer<typeof TutorSchema>;
