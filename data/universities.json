@@ -2,41 +2,91 @@
   {
     "id": "1",
     "name": "Hacettepe Üniversitesi",
-    "logo": "/universities/hacettepe.png"
+    "logo": "/universities/hacettepe-universitesi.png"
   },
   {
     "id": "2",
     "name": "Ankara Üniversitesi",
-    "logo": "/universities/ankara.png"
+    "logo": "/universities/ankara-universitesi.png"
   },
   {
     "id": "3",
     "name": "Gazi Üniversitesi",
-    "logo": "/universities/gazi.png"
-  },
-  {
-    "id": "4",
-    "name": "ODTÜ",
-    "logo": "/universities/odtu.png"
+    "logo": "/universities/gazi-universitesi.png"
   },
   {
     "id": "5",
     "name": "İstanbul Üniversitesi",
-    "logo": "/universities/istanbul.png"
+    "logo": "/universities/istanbul-universitesi.png"
   },
   {
     "id": "6",
     "name": "Ege Üniversitesi",
-    "logo": "/universities/ege.png"
+    "logo": "/universities/ege-universitesi.png"
   },
   {
     "id": "7",
     "name": "Dokuz Eylül Üniversitesi",
-    "logo": "/universities/dokuz-eylul.png"
+    "logo": "/universities/dokuz-eylul-universitesi.png"
   },
   {
-    "id": "8",
-    "name": "Marmara Üniversitesi",
-    "logo": "/universities/marmara.png"
-  }
+    "id": "9",
+    "name": "Akdeniz Üniversitesi",
+    "logo": "/universities/akdeniz-universitesi.png"
+  },
+  {
+    "id": "10",
+    "name": "Dicle Üniversitesi",
+    "logo": "/universities/dicle-universitesi.png"
+  },
+  {
+    "id": "11",
+    "name": "İstanbul Medipol Üniversitesi",
+    "logo": "/universities/istanbul-medipol-universitesi.png"
+  },
+  {
+    "id": "12",
+    "name": "Bursa Uludağ Üniversitesi",
+    "logo": "/universities/bursa-uludag-universitesi.png"
+  },
+  {
+    "id": "13",
+    "name": "Çukurova Üniversitesi",
+    "logo": "/universities/cukurova-universitesi.png"
+  },
+  {
+    "id": "14",
+    "name": "Atatürk Üniversitesi",
+    "logo": "/universities/ataturk-universitesi.png"
+  },
+  {
+    "id": "15",
+    "name": "Ondokuz Mayıs Üniversitesi",
+    "logo": "/universities/ondokuzmayis-universitesi.png"
+  },
+  {
+    "id": "16",
+    "name": "Mersin Üniversitesi",
+    "logo": "/universities/mersin-universitesi.png"
+  },
+  {
+    "id": "17",
+    "name": "Yeditepe Üniversitesi",
+    "logo": "/universities/yeditepe-universitesi.png"
+  },
+  {
+    "id": "18",
+    "name": "Karadeniz Teknik Üniversitesi",
+    "logo": "/universities/karadeniz-teknik-universitesi.png"
+  },
+  {
+      "id": "19",
+      "name": "Giresun Üniversitesi",
+      "logo": "/universities/giresun-universitesi.png"
+  },
+    {
+      "id": "20",
+      "name": "Sağlık Bilimleri Üniversitesi",
+      "logo": "/universities/saglik-bilimleri-universitesi.png"
+    }
 ]

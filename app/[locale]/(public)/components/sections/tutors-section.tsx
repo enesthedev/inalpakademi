@@ -17,13 +17,13 @@ interface TutorsSectionProps {
 
 export function TutorsSection({ tutors }: TutorsSectionProps) {
   return (
-    <section id="egitmenler" className="py-20 lg:py-32 bg-background">
+    <section id="egitmenler" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 space-y-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+        <div className="text-center mb-10 space-y-2">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
             <span className="text-primary">Uzman</span> Eğitmenlerimiz
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
             Alanında derece yapmış, deneyimli eğitmenlerimizle hayalindeki
             üniversiteye bir adım daha yaklaş.
           </p>
@@ -62,12 +62,12 @@ export function TutorsSection({ tutors }: TutorsSectionProps) {
                     </div>
                   </div>
 
-                  <div className="p-6 space-y-3">
+                  <div className="p-5 space-y-2">
                     <div>
-                      <h3 className="text-xl font-bold text-foreground">
+                      <h3 className="text-lg font-bold text-foreground">
                         {tutor.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-xs text-muted-foreground">
                         {tutor.university}
                       </p>
                     </div>

@@ -10,10 +10,10 @@ export function UniversitiesMarquee({
   universities,
 }: UniversitiesMarqueeProps) {
   return (
-    <section className="py-12 bg-secondary">
+    <section className="py-8 bg-secondary">
       <div className="w-full flex justify-center mb-8 px-4">
-        <p className="text-center text-sm text-secondary-foreground/70 font-medium uppercase tracking-wider">
-          Öğrencilerimizin Kazandığı Üniversiteler
+        <p className="text-center text-xs text-secondary-foreground/70 font-medium uppercase tracking-wider">
+          Türkiye'nin Önde Gelen Üniversitelerinin Öğrencileri
         </p>
       </div>
       <div className="relative">
@@ -23,15 +23,17 @@ export function UniversitiesMarquee({
           {universities.map((university) => (
             <div
               key={university.id}
-              className="w-16 h-16 mx-4 bg-white rounded-full flex items-center justify-center shadow-sm border border-secondary-foreground/10 overflow-hidden"
+              className="w-14 h-14 mx-4 bg-white rounded-full flex items-center justify-center shadow-sm border border-secondary-foreground/10 overflow-hidden"
               title={university.name}
             >
               <Image
                 src={university.logo}
                 alt={university.name}
-                width={48}
-                height={48}
+                width={42}
+                height={42}
                 className="object-contain"
+                loading="eager"
+                quality={85}
               />
             </div>
           ))}
