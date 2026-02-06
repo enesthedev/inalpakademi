@@ -12,7 +12,7 @@ interface FaqSectionProps {
 
 export function FaqSection({ faqItems }: FaqSectionProps) {
   return (
-    <section className="flex w-full flex-col items-center justify-center space-y-8 bg-background py-16 lg:py-24">
+    <section className="flex w-full flex-col items-center justify-center bg-muted/30 space-y-8 py-16 lg:py-24">
       <h2 className="text-3xl lg:text-4xl font-semibold text-foreground">
         Sıkça Sorulan Sorular
       </h2>

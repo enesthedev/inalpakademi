@@ -8,7 +8,7 @@ import { AboutSection } from "./components/sections/about-section";
 import { TutorsSection } from "./components/sections/tutors-section";
 import { TestimonialsSection } from "./components/sections/testimonials-section";
 import { FaqSection } from "./components/sections/faq-section";
-import { CTASection } from "./components/sections/cta-section";
+import { ContactSection } from "./components/sections/contact-section";
 import { ClipboardPenLine, Rocket, Star } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 
@@ -151,7 +151,7 @@ export default async function Page() {
       <TutorsSection tutors={tutors} />
       <TestimonialsSection testimonials={testimonials} />
       <FaqSection faqItems={faqItems} />
-      <CTASection />
+      <ContactSection />
     </div>
   );
 }
