@@ -2,6 +2,7 @@ import { getTestimonials } from "@/app/actions/testimonials";
 import { getFaqItems } from "@/app/actions/faq";
 import { getTutors } from "@/app/actions/tutors";
 import { getUniversities } from "@/app/actions/universities";
+import { getSettings } from "@/app/actions/settings";
 
 import { UniversitiesMarquee } from "./components/universities-marquee";
 import { AboutSection } from "./components/sections/about-section";
@@ -13,12 +14,14 @@ import { ClipboardPenLine, Rocket, Star } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 
 export default async function Page() {
-  const [tutors, testimonials, faqItems, universities] = await Promise.all([
-    getTutors(),
-    getTestimonials(),
-    getFaqItems(),
-    getUniversities(),
-  ]);
+  const [tutors, testimonials, faqItems, universities, settings] =
+    await Promise.all([
+      getTutors(),
+      getTestimonials(),
+      getFaqItems(),
+      getUniversities(),
+      getSettings(),
+    ]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -39,14 +42,16 @@ export default async function Page() {
           <Button
             variant="secondary"
             className="h-12 px-8 text-sm shadow-none lg:h-14 lg:px-10 lg:text-lg"
+            asChild
           >
-            Şimdi Ders Al
+            <a href="#iletisim">Şimdi Ders Al</a>
           </Button>
           <Button
             variant="success"
             className="h-12 px-8 text-sm shadow-none lg:h-14 lg:px-10 lg:text-lg"
+            asChild
           >
-            Hemen Ara
+            <a href={`tel:${settings.phone.number}`}>Hemen Ara</a>
           </Button>
         </div>
 
@@ -84,7 +89,7 @@ export default async function Page() {
       </section>
       <UniversitiesMarquee universities={universities} />
       <AboutSection />
-      <section className="py-16 lg:py-24">
+      <section id="nasil-calisir" className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
@@ -151,7 +156,7 @@ export default async function Page() {
       <TutorsSection tutors={tutors} />
       <TestimonialsSection testimonials={testimonials} />
       <FaqSection faqItems={faqItems} />
-      <ContactSection />
+      <ContactSection whatsappNumber={settings.phone.whatsapp} />
     </div>
   );
 }

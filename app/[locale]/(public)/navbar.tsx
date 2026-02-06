@@ -15,7 +15,13 @@ import {
 } from "@/app/components/ui/drawer";
 import { HandmadeLogo } from "@/app/components/handmade-logo";
 
-export function Navbar() {
+import { type Settings } from "@/app/actions/settings";
+
+interface NavbarProps {
+  settings: Settings;
+}
+
+export function Navbar({ settings }: NavbarProps) {
   return (
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="hidden max-h-[60px] w-full items-center justify-center bg-white font-medium md:flex">
@@ -26,10 +32,10 @@ export function Navbar() {
           </h3>
           <div className="flex items-center justify-center space-x-5">
             <Link
-              href="tel:+905554440000"
+              href={`tel:${settings.phone.number}`}
               className="text-xs font-semibold text-blue-800 lg:text-sm"
             >
-              +90 555 444 00 00
+              {settings.phone.display}
             </Link>
             {
               // TODO: Need revision for next time release
@@ -58,19 +64,19 @@ export function Navbar() {
             aria-label="Ana navigasyon"
           >
             <Link
-              href=""
+              href="#nasil-calisir"
               className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium"
             >
               Hemen Başla
             </Link>
             <Link
-              href=""
+              href="#hakkimizda"
               className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium"
             >
               Eğitim Modelimiz
             </Link>
             <Link
-              href=""
+              href="#yorumlar"
               className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium"
             >
               Yorumlar
@@ -113,19 +119,19 @@ export function Navbar() {
                 aria-label="Mobil navigasyon"
               >
                 <Link
-                  href=""
+                  href="#nasil-calisir"
                   className="px-4 py-3 rounded-xl hover:bg-muted transition-colors text-foreground font-medium"
                 >
                   Hemen Başla
                 </Link>
                 <Link
-                  href=""
+                  href="#hakkimizda"
                   className="px-4 py-3 rounded-xl hover:bg-muted transition-colors text-foreground font-medium"
                 >
                   Eğitim Modelimiz
                 </Link>
                 <Link
-                  href=""
+                  href="#yorumlar"
                   className="px-4 py-3 rounded-xl hover:bg-muted transition-colors text-foreground font-medium"
                 >
                   Yorumlar

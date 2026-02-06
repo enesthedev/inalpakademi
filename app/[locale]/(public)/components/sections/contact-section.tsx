@@ -47,9 +47,11 @@ const validate = (values: FormValues) => {
   return errors;
 };
 
-const WHATSAPP_NUMBER = "905338115961";
+interface ContactSectionProps {
+  whatsappNumber: string;
+}
 
-export function ContactSection() {
+export function ContactSection({ whatsappNumber }: ContactSectionProps) {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const formik = useFormik<FormValues>({
@@ -81,14 +83,14 @@ export function ContactSection() {
       const message = encodeURIComponent(
         "Merhaba, İnalp Akademi hakkında sorularım var.",
       );
-      return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+      return `https://wa.me/${whatsappNumber}?text=${message}`;
     }
 
     const roleText = formik.values.role === "parent" ? "veliyim" : "öğrenciyim";
     const message = encodeURIComponent(
       `Merhaba, ben ${formik.values.fullName}, ${roleText} ve İnalp hakkında bilgi almak istiyorum.`,
     );
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    return `https://wa.me/${whatsappNumber}?text=${message}`;
   };
 
   if (isSuccess) {

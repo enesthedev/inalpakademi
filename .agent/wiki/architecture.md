@@ -69,7 +69,8 @@ inalp/
 │   ├── courses.json           # Course data
 │   ├── faq.json               # FAQ data
 │   ├── success-stories.json   # Success stories data
-│   └── testimonials.json      # Testimonials data
+│   ├── testimonials.json      # Testimonials data
+│   └── settings.json          # Global app configuration (phone, social)
 ├── lib/
 │   ├── i18n/                  # Routing and Pathnames configuration
 │   └── proxy-chain/           # Middleware Chain Infrastructure

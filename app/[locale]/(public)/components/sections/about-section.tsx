@@ -26,7 +26,7 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section className="py-16 lg:py-24 bg-muted/50">
+    <section id="hakkimizda" className="py-16 lg:py-24 bg-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
           <h2 className="font-bold text-foreground flex items-center justify-center gap-2 flex-wrap">

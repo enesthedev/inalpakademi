@@ -15,6 +15,8 @@
 - [x] Navbar updates (announcement bar, mobile drawer)
 - [x] Tutor data expansion (20 tutors with real photos)
 - [x] Universities data expansion (20 universities)
+- [x] Navigation fixes (Smooth scroll, anchor links, phone number standardization)
+- [x] Settings infrastructure (Mock API for global configs)
 
 ## In Progress
 

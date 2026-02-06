@@ -1,7 +1,7 @@
 # Inalp Agent Configuration
 
 > **Last Updated:** 2026-02-06
-> **Version:** 2.1.0
+> **Version:** 2.1.1
 > **Location:** `AGENT.md` (Root)
 
 This file is the main configuration and reference document that guides the AI agent's behavior. Project context and rules are maintained modularly under the `.agent/` directory.
@@ -67,6 +67,7 @@ bun run lint
 
 | Date | Change |
 |------|--------|
+| 2026-02-06 | Implemented settings infrastructure (phone nums via mock API), fixed navigation links with smooth scroll, standardized phone numbers across the app. |
 | 2026-02-06 | Added Contact section with Formik validation and WhatsApp integration. Expanded tutors (20) and universities (20) data. Added About section with HandmadeLogo. |
 | 2026-02-06 | Implemented Steps section redesign (3-step cards with icons), Universities Marquee (circular logos), and Tutors Carousel (embla-carousel with ratings/student count). |
 | 2026-02-06 | UI improvements: Updated testimonials card styling, adjusted hero section height, fixed Marquee Tailwind v4 syntax. |
