@@ -67,6 +67,7 @@ bun run lint
 
 | Date | Change |
 |------|--------|
+| 2026-02-06 | Added Contact section with Formik validation and WhatsApp integration. Expanded tutors (20) and universities (20) data. Added About section with HandmadeLogo. |
 | 2026-02-06 | Implemented Steps section redesign (3-step cards with icons), Universities Marquee (circular logos), and Tutors Carousel (embla-carousel with ratings/student count). |
 | 2026-02-06 | UI improvements: Updated testimonials card styling, adjusted hero section height, fixed Marquee Tailwind v4 syntax. |
 | 2026-02-05 | Implemented Public Layout Restructure: Created `(public)` group, added `tutors.json`, simplified sections. |

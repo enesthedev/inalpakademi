@@ -96,10 +96,11 @@ The landing page currently includes the following implemented sections:
 
 | Section | File | Description |
 |---------|------|-------------|
-| Hero | Inline in `page.tsx` | Main banner with headline and CTAs (Static) |
+| Hero | Inline in `page.tsx` | Main banner with headline and dual CTAs (Static) |
 | Universities Marquee | `universities-marquee.tsx` | Scrolling university logos from `universities.json` (Dynamic) |
-| Steps | `steps-section.tsx` | 3-step cards with icons (Static) |
-| Tutors | `tutors-section.tsx` | Carousel with tutor cards, ratings, and student count from `tutors.json` (Dynamic) |
+| About | `about-section.tsx` | "İnalp Nedir?" section with feature cards and HandmadeLogo (Static) |
+| Steps | Inline in `page.tsx` | 3-step cards with icons - Formu Doldur, Eğitmenini Tanı, Başarıya Ulaş (Static) |
+| Tutors | `tutors-section.tsx` | Embla carousel with tutor cards, city, rank from `tutors.json` (Dynamic) |
 | Testimonials | `testimonials-section.tsx` | User reviews marquee from `testimonials.json` (Dynamic) |
 | FAQ | `faq-section.tsx` | Accordion FAQ from `faq.json` (Dynamic) |
-| CTA | `cta-section.tsx` | Final call-to-action section (Static) |
+| Contact | `contact-section.tsx` | Contact form with Formik validation + WhatsApp integration (Dynamic) |
