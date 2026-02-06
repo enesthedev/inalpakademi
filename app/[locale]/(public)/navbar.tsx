@@ -45,7 +45,12 @@ export function Navbar() {
       <div className="container mx-auto px-4 pt-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href={ROUTES.LANDING}>
-            <HandmadeLogo size="lg" variant="light" />
+            <HandmadeLogo
+              titleClassName="text-2xl leading-none"
+              subtitleClassName="text-lg -bottom-5 -right-7"
+              strokeWidth="4px"
+              variant="light"
+            />
           </Link>
 
           <nav
@@ -93,7 +98,12 @@ export function Navbar() {
               <DrawerHeader>
                 <DrawerTitle>
                   <Link href={ROUTES.LANDING}>
-                    <HandmadeLogo size="sm" variant="dark" />
+                    <HandmadeLogo
+                      titleClassName="text-xl leading-none"
+                      subtitleClassName="text-sm -bottom-3 -right-5"
+                      strokeWidth="2px"
+                      variant="dark"
+                    />
                   </Link>
                 </DrawerTitle>
               </DrawerHeader>

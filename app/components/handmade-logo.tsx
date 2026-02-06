@@ -3,42 +3,23 @@ import { GraduationCap } from "lucide-react";
 
 interface HandmadeLogoProps {
   className?: string;
-  size?: "sm" | "md" | "lg";
+  titleClassName?: string;
+  subtitleClassName?: string;
+  iconClassName?: string;
   showIcon?: boolean;
   variant?: "light" | "dark";
+  strokeWidth?: string;
 }
-
-const sizeConfig = {
-  sm: {
-    icon: "w-10 h-10",
-    iconInner: "w-6 h-6",
-    title: "text-xl leading-none",
-    subtitle: "text-sm -bottom-3 -right-5",
-    stroke: "2px",
-  },
-  md: {
-    icon: "w-10 h-10",
-    iconInner: "w-6 h-6",
-    title: "text-2xl leading-none",
-    subtitle: "text-base -bottom-4 -right-5",
-    stroke: "3px",
-  },
-  lg: {
-    icon: "w-10 h-10",
-    iconInner: "w-6 h-6",
-    title: "text-2xl leading-none",
-    subtitle: "text-lg -bottom-5 -right-7",
-    stroke: "4px",
-  },
-};
 
 export function HandmadeLogo({
   className,
-  size = "md",
+  titleClassName = "text-2xl leading-none",
+  subtitleClassName = "text-base -bottom-4 -right-5",
+  iconClassName = "w-6 h-6",
   showIcon = true,
   variant = "light",
+  strokeWidth = "3px",
 }: HandmadeLogoProps) {
-  const config = sizeConfig[size];
   const textColor =
     variant === "light" ? "text-primary-foreground" : "text-foreground";
 
@@ -50,7 +31,7 @@ export function HandmadeLogo({
         <GraduationCap
           className={cn(
             variant === "light" ? "text-primary-foreground" : "text-primary",
-            config.iconInner,
+            iconClassName,
           )}
         />
       )}
@@ -58,20 +39,20 @@ export function HandmadeLogo({
         <span
           className={cn(
             "font-bold font-playfair tracking-tight",
-            config.title,
+            titleClassName,
             textColor,
           )}
         >
-          Inalp
+          İnalp
         </span>
         <span
           className={cn(
             "absolute font-bold font-caveat whitespace-nowrap [paint-order:stroke_fill]",
-            config.subtitle,
+            subtitleClassName,
             textColor,
           )}
           style={{
-            WebkitTextStroke: `${config.stroke} var(${variant === "light" ? "--color-primary" : "--color-primary-foreground"})`,
+            WebkitTextStroke: `${strokeWidth} var(${variant === "light" ? "--color-primary" : "--color-primary-foreground"})`,
           }}
           aria-hidden="true"
         >
