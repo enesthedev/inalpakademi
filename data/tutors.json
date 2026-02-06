@@ -2,48 +2,183 @@
   "tutors": [
     {
       "id": "1",
-      "name": "Ali Yılmaz",
-      "specialization": "Matematik",
-      "university": "Boğaziçi Üniversitesi Tıp Fakültesi",
-      "photo": "/images/tutors/ali-yilmaz.jpg",
-      "rating": 4.9,
-      "studentCount": 120
+      "name": "Barış Çiftsüren",
+      "rank": "Sayısal 8901.",
+      "university": "Çukurova Üniversitesi Tıp Fakültesi",
+      "city": "Adana",
+      "mode": "face_to_face",
+      "photo": "/tutors/adana/baris-ciftsuren.jpg"
     },
     {
       "id": "2",
-      "name": "Zeynep Kaya",
-      "specialization": "Fizik",
-      "university": "İTÜ Fizik Mühendisliği",
-      "photo": "/images/tutors/zeynep-kaya.jpg",
-      "rating": 4.8,
-      "studentCount": 95
+      "name": "Buğra Emirhan Uysal",
+      "rank": "Sayısal 14143.",
+      "university": "Sağlık Bilimleri Üniversitesi Tıp Fakültesi",
+      "city": "Adana",
+      "mode": "face_to_face",
+      "photo": "/tutors/adana/bugra-emirhan-uysal.jpg"
     },
     {
       "id": "3",
-      "name": "Mehmet Demir",
-      "specialization": "Biyoloji",
-      "university": "Hacettepe Tıp Fakültesi",
-      "photo": "/images/tutors/mehmet-demir.jpg",
-      "rating": 5.0,
-      "studentCount": 150
+      "name": "Doğa Güverçinci",
+      "rank": "TR 14422",
+      "university": "Çukurova Üniversitesi Tıp Fakültesi",
+      "city": "Adana",
+      "mode": "face_to_face",
+      "photo": "/tutors/adana/doga-guvercinci.jpg"
     },
     {
       "id": "4",
-      "name": "Ayşe Öztürk",
-      "specialization": "Kimya",
-      "university": "Ankara Üniversitesi Tıp",
-      "photo": "/images/tutors/ayse-ozturk.jpg",
-      "rating": 4.7,
-      "studentCount": 80
+      "name": "Ahsen Tuna",
+      "rank": "TR 2331",
+      "university": "Ankara Üniversitesi Tıp Fakültesi",
+      "city": "Ankara",
+      "mode": "face_to_face",
+      "photo": "/tutors/ankara/ahsen-tuna.jpg"
     },
     {
       "id": "5",
-      "name": "Can Arslan",
-      "specialization": "Türkçe",
-      "university": "Gazi Üniversitesi Edebiyat",
-      "photo": "/images/tutors/can-arslan.jpg",
-      "rating": 4.9,
-      "studentCount": 110
+      "name": "Emir Berke Aksu",
+      "rank": "TR 2776",
+      "university": "Ankara Üniversitesi Tıp Fakültesi",
+      "city": "Ankara",
+      "mode": "face_to_face",
+      "photo": "/tutors/ankara/emir-berke-aksu.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Eray Yılmaz",
+      "rank": "TR 2760",
+      "university": "Ankara Üniversitesi Tıp Fakültesi",
+      "city": "Ankara",
+      "mode": "face_to_face",
+      "photo": "/tutors/ankara/eray-yilmaz.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Merve Etli",
+      "rank": "TR 3043",
+      "university": "Ankara Üniversitesi Tıp Fakültesi",
+      "city": "Ankara",
+      "mode": "face_to_face",
+      "photo": "/tutors/ankara/merve-etli.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Berka Kurku",
+      "rank": "TR 18595",
+      "university": "Atatürk Üniversitesi Tıp Fakültesi",
+      "city": "Erzurum",
+      "mode": "face_to_face",
+      "photo": "/tutors/erzurum/berka-kurku.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Azra Nermin Karadeniz",
+      "rank": "TR 21947",
+      "university": "Giresun Üniversitesi Tıp Fakültesi",
+      "city": "Giresun",
+      "mode": "face_to_face",
+      "photo": "/tutors/giresun/azra-nermin-karadeniz.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Nisa Oktar",
+      "rank": "TR 26702",
+      "university": "Giresun Üniversitesi Tıp Fakültesi",
+      "city": "Giresun",
+      "mode": "face_to_face",
+      "photo": "/tutors/giresun/nisa-oktar.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Sude Kaya",
+      "rank": "TR 23476",
+      "university": "Giresun Üniversitesi Tıp Fakültesi",
+      "city": "Giresun",
+      "mode": "face_to_face",
+      "photo": "/tutors/giresun/sude-kaya.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Esma Nur Taşlı",
+      "rank": "TR 18603",
+      "university": "Sağlık Bilimleri Üniversitesi Tıp Fakültesi",
+      "city": "İstanbul",
+      "mode": "face_to_face",
+      "photo": "/tutors/istanbul/esma-nur-tasli.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Sena Evrim Gostalak",
+      "rank": "TR 3802",
+      "university": "Ege Üniversitesi Tıp Fakültesi",
+      "city": "İzmir",
+      "mode": "face_to_face",
+      "photo": "/tutors/izmir/sena-evrim-gostalak.jpg"
+    },
+    {
+      "id": "14",
+      "name": "İbrahim Özenir",
+      "rank": "TR 4403",
+      "university": "Ege Üniversitesi Tıp Fakültesi",
+      "city": "İzmir",
+      "mode": "face_to_face",
+      "photo": "/tutors/izmir/ibrahim-ozenir.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Merve Uygur",
+      "rank": "TR 4544",
+      "university": "Ege Üniversitesi Tıp Fakültesi",
+      "city": "İzmir",
+      "mode": "face_to_face",
+      "photo": "/tutors/izmir/merve-uygur.jpg"
+    },
+    {
+      "id": "16",
+      "name": "Yağmur Şenöztop",
+      "rank": "TR 3296",
+      "university": "Ege Üniversitesi Tıp Fakültesi",
+      "city": "İzmir",
+      "mode": "face_to_face",
+      "photo": "/tutors/izmir/yagmur-senoztop.jpg"
+    },
+    {
+      "id": "17",
+      "name": "Sena Nur Öztin",
+      "rank": "TR 14060",
+      "university": "Mersin Üniversitesi Tıp Fakültesi",
+      "city": "Mersin",
+      "mode": "face_to_face",
+      "photo": "/tutors/mersin/sena-nur-oztin.jpg"
+    },
+    {
+      "id": "18",
+      "name": "Umut Aslankıran",
+      "rank": "TR 11781",
+      "university": "Mersin Üniversitesi Tıp Fakültesi",
+      "city": "Mersin",
+      "mode": "face_to_face",
+      "photo": "/tutors/mersin/umut-aslankiran.jpg"
+    },
+    {
+      "id": "19",
+      "name": "Nehir Yılmaz",
+      "rank": "TR 24072",
+      "university": "Recep Tayyip Erdoğan Üniversitesi Tıp Fakültesi",
+      "city": "Rize",
+      "mode": "face_to_face",
+      "photo": "/tutors/rize/nehir-yilmaz.jpg"
+    },
+    {
+      "id": "20",
+      "name": "Nurcan Gezen",
+      "rank": "TR 23213",
+      "university": "Recep Tayyip Erdoğan Üniversitesi Tıp Fakültesi",
+      "city": "Rize",
+      "mode": "face_to_face",
+      "photo": "/tutors/rize/nurcan-gezen.jpg"
     }
   ]
 }

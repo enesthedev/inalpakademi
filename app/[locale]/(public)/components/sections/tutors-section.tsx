@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Tutor } from "@/app/actions/tutors";
-import { Star, Users } from "lucide-react";
+import { MapPin } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -36,63 +36,40 @@ export function TutorsSection({ tutors }: TutorsSectionProps) {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-3">
             {tutors.map((tutor) => (
               <CarouselItem
                 key={tutor.id}
-                className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                className="pl-3 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
               >
-                <div className="group relative overflow-hidden rounded-2xl bg-white shadow-md border border-border/50 transition-all hover:shadow-xl">
-                  <div className="relative aspect-4/5 overflow-hidden">
-                    <div className="absolute inset-0 bg-muted flex items-center justify-center">
-                      <Image
-                        src={tutor.photo}
-                        alt={tutor.name}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
+                <div className="group relative overflow-hidden rounded-xl aspect-3/4">
+                  <Image
+                    src={tutor.photo}
+                    alt={tutor.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
-                        {tutor.specialization}
-                      </span>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 space-y-1">
+                    <div className="flex items-center gap-1 text-white/80">
+                      <MapPin className="w-3 h-3" />
+                      <span className="text-xs">{tutor.city}</span>
                     </div>
-                  </div>
-
-                  <div className="p-5 space-y-2">
-                    <div>
-                      <h3 className="text-lg font-bold text-foreground">
-                        {tutor.name}
-                      </h3>
-                      <p className="text-xs text-muted-foreground">
-                        {tutor.university}
-                      </p>
-                    </div>
-
-                    <div className="flex items-center justify-between pt-2 border-t border-border/50">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        <span className="text-sm font-semibold text-foreground">
-                          {tutor.rating}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-1 text-muted-foreground">
-                        <Users className="w-4 h-4" />
-                        <span className="text-sm">
-                          {tutor.studentCount} öğrenci
-                        </span>
-                      </div>
-                    </div>
+                    <h3 className="text-sm font-semibold text-white leading-tight">
+                      {tutor.name}
+                    </h3>
+                    <p className="text-xs text-white/70 font-medium">
+                      {tutor.rank}
+                    </p>
                   </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden lg:flex -left-14" />
-          <CarouselNext className="hidden lg:flex -right-14" />
+          <CarouselPrevious className="hidden lg:flex -left-12" />
+          <CarouselNext className="hidden lg:flex -right-12" />
         </Carousel>
       </div>
     </section>
