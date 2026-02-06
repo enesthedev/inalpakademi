@@ -17,7 +17,7 @@ interface TutorsSectionProps {
 
 export function TutorsSection({ tutors }: TutorsSectionProps) {
   return (
-    <section id="egitmenler" className="py-16 lg:py-24 bg-background">
+    <section id="egitmenler" className="py-16 lg:py-24 bg-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 space-y-2">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
